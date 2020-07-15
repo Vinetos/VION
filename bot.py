@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -17,4 +18,4 @@ async def on_message(message):
         await message.channel.send('Hello!')
 
 
-client.run('yes')
+client.run(os.environ.get('TOKEN'))
